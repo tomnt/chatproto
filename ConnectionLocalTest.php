@@ -22,24 +22,9 @@ class ConnectionLocalTest extends AConnection implements IConnection
     $this->protocol='LocalTest';
   }
 
-  public function getChannel(string $channelName): Channel
-  {
-    return $this->server->getChannel($channelName);
-  }
-
   public function getUser(string $nick): User
   {
     return $this->server->getUser($nick);
-  }
-
-  public function createMessage(User $user, Channel $channel, string $body): Message
-  {
-    return $this->server->createMessage($user, $channel, $body);
-  }
-
-  public function getMessages(): array
-  {
-    return $this->server->getMessages();
   }
 
 }
