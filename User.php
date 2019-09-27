@@ -83,9 +83,6 @@ class User
    */
   public function join(string $channelName): Channel
   {
-
-    //echo "join: ".$channelName.PHP_EOL;
-
     $channel = $this->server->getChannel($channelName);
     $channel->addUser($this->nick);
     $this->aChannel[$channel->getId()] = &$channel;
