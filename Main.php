@@ -15,7 +15,6 @@ class Main
     $u1->publishMessage('C2', 'Hello C two');
     $u2 = $connection->getUser('Tom');
     $u2->publishMessage('C1', 'Buenos días, C uno.');
-
     // Report
     echo $u1->getNick() . ' said;' . PHP_EOL;
     self::printMessages($u1->getMessages());

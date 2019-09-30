@@ -14,7 +14,6 @@ class ConnectionLocalTest extends AConnection implements IConnection
    * ConnectionLocalTest constructor.
    * @param string $protocol
    */
-
   function __construct(string $protocol)
   {
     parent::__construct($protocol);

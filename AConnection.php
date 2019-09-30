@@ -1,6 +1,5 @@
 <?php
 
-
 abstract class AConnection
 {
 
@@ -10,6 +9,5 @@ abstract class AConnection
   protected $protocol;
 
   public function __construct(string $protocol){}
-
 
 }

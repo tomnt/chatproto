@@ -42,8 +42,10 @@ class Server
   }
 
   /**
-   * @param string $channelName
-   * @return Channel
+   * Obtain Channel object.
+   *
+   * @param string $channelName Channel name
+   * @return Channel Channel object
    * @throws Exception
    */
   public function getChannel(string $channelName): Channel
@@ -61,8 +63,10 @@ class Server
   ////////////////////////////////////////////////////////////////////////////////////////////////////
 
   /**
-   * @param string $nick
-   * @return User
+   * Obtain User object
+   *
+   * @param string $nick Nick name of the user
+   * @return User User object
    * @throws Exception
    */
   private function createUser(string $nick): User
@@ -96,10 +100,12 @@ class Server
   /// Message
   ////////////////////////////////////////////////////////////////////////////////////////////////////
   /**
-   * @param User $user
-   * @param Channel $channel
-   * @param string $body
-   * @return Message
+   * Obtain Message object
+   *
+   * @param User $user User object
+   * @param Channel $channel Channel object
+   * @param string $body Body of the message
+   * @return Message Message object
    * @throws Exception
    */
   public function createMessage(User $user, Channel $channel, string $body): Message
@@ -115,7 +121,9 @@ class Server
   }
 
   /**
-   * @return Message[]
+   * Obtain an array of all Messages object
+   *
+   * @return Message[] Array of all Messages object
    * @throws Exception
    */
   public function getMessages(): array

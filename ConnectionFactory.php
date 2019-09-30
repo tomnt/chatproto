@@ -9,7 +9,7 @@ class ConnectionFactory
     }elseif ($protocol == 'irc') {
       return  new ConnectionIrc($protocol);
     } elseif ($protocol == 'whatever') {
-      //return  CommunicationWhatever();
+      //return  CommunicationWhatever();//TODO: Implement
     }
   }
 }
