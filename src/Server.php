@@ -1,5 +1,8 @@
 <?php
-include_once 'Channel.php';
+
+namespace Chat;
+
+//include_once 'Channel.php';
 
 class Server
 {

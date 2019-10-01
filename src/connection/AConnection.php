@@ -1,5 +1,7 @@
 <?php
 
+namespace Chat\connection;
+
 abstract class AConnection
 {
 

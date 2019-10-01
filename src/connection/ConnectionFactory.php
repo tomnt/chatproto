@@ -1,5 +1,6 @@
 <?php
-include_once 'ConnectionLocalTest.php';
+namespace Chat\connection;
+
 class ConnectionFactory
 {
   public static function getConnection(string $protocol): IConnection

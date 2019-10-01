@@ -1,7 +1,7 @@
 <?php
-include_once 'AConnection.php';
-include_once 'IConnection.php';
-include_once 'Server.php';
+namespace Chat\connection;
+
+use Chat\{Server, User};
 
 class ConnectionLocalTest extends AConnection implements IConnection
 {

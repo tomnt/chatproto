@@ -1,8 +1,7 @@
 <?php
+require_once 'vendor/autoload.php';
 
-include_once 'User.php';
-include_once 'Server.php';
-include_once 'ConnectionFactory.php';
+use Chat\connection\ConnectionFactory as ConnectionFactory;
 
 class Main
 {
@@ -42,4 +41,3 @@ class Main
 }
 
 new Main();
-

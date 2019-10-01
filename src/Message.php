@@ -1,5 +1,6 @@
 <?php
 
+namespace Chat;
 
 class Message
 {
@@ -34,12 +35,12 @@ class Message
    * @param User $user
    * @param Channel $channel
    * @param string $body
-   * @throws Exception
+   * @throws \Exception
    */
   function __construct(int $id, User &$user, Channel &$channel, string $body)
   {
     $this->id = $id;
-    $this->dateTime = new DateTime();
+    $this->dateTime = new \DateTime();
     $this->body = $body;
     $this->user = &$user;
     $this->channel = &$channel;

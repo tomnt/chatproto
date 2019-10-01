@@ -1,6 +1,6 @@
 <?php
-include_once('User.php');
-include_once('Message.php');
+
+namespace Chat;
 
 class Channel
 {
