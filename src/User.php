@@ -7,10 +7,6 @@ class User
   ////////////////////////////////////////////////////////////////////////////////////////////////////
   /// Properties
   ////////////////////////////////////////////////////////////////////////////////////////////////////
-  /**
-   * @var string $communication
-   */
-  private $connection;
 
   /**
    * @var int $id
@@ -93,7 +89,7 @@ class User
   /**
    * @param string $channelName
    * @param string $body
-   * @throws Exception
+   * @throws \Exception
    */
   public function publishMessage(string $channelName, string $body): void
   {
@@ -105,13 +101,24 @@ class User
   }
 
   /**
-   * @return array
+   * @return Message[]
    */
   public function getMessages(): array{
     return $this->aMessage;
   }
 
-  public function getChannels(){
+  /**
+   * @return Channel[]
+   */
+  public function getChannels(): array{
     return $this->aChannel;
   }
+
+  /**
+   * @param Channel $channel
+   */
+  public function setChannel(Channel &$channel): void{
+    $this->aChannel[$channel->id] = $channel;
+  }
+
 }

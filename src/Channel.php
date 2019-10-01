@@ -65,6 +65,7 @@ class Channel
   public function addUser(string $nick): void
   {
     $user = $this->server->getUser($nick);
+    $user->setChannel($this);
     $this->aUser[$user->getId()] = &$user;
   }
 
@@ -84,7 +85,7 @@ class Channel
   }
 
   /**
-   * @return array
+   * @return Message[]
    */
   public function getMessages(): array{
     return $this->aMessage;

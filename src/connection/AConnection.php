@@ -4,7 +4,6 @@ namespace Chat\connection;
 
 abstract class AConnection
 {
-
   /**
    * @var string
    */

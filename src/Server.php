@@ -80,7 +80,8 @@ class Server
         throw new Exception("Can't add. User name,'$nick' exists.");
       }
     }
-    $this->aUser[$id] = new User($id, $nick, $this);
+    $user = new User($id, $nick, $this);
+    $this->aUser[$id] = &$user;
     return $this->aUser[$id];
   }
 
@@ -109,7 +110,7 @@ class Server
    * @param Channel $channel Channel object
    * @param string $body Body of the message
    * @return Message Message object
-   * @throws Exception
+   * @throws \Exception
    */
   public function createMessage(User $user, Channel $channel, string $body): Message
   {
